@@ -24,14 +24,8 @@ async def on_message(message):
     if message.content.startswith('$help'):
         await message.channel.send('$help, $hello, $website, $roulette [1-6]')
     if message.content.startswith('$website'):
-        await message.channel.send(embed=discord.Embed(title="BravoHome",url="https://bravohome.onrender.com"))
-    if message.content.startswith('$overthrowTheGovernment'):
-      await message.channel.send("Thought Crime Detected")
-      file = discord.File("dictator.png", filename="dictator.png")
-      embed = discord.Embed()
-      embed.set_image(url="attachment://dictator.png")
-      await message.channel.send(file=file, embed=embed)
-      await message.channel.send('Report to a superior officer for disciplinary action')
+        # await message.channel.send(embed=discord.Embed(title="BravoHome",url="https://bravohome.onrender.com"))
+        await message.channel.send('Website currently under development')
     if message.content.startswith('$roulette'):
       if str(random.randint(1,6)) in message.content.lower():
         await message.author.send('https://discord.gg/ykCuCENmgX')
